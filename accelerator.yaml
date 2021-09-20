@@ -1,0 +1,42 @@
+accelerator:
+  displayName: Steeltoe Weather Forecast
+  description: A Steeltoe sample accelerator
+  iconUrl: https://raw.githubusercontent.com/sample-accelerators/icons/master/icon-steeltoe.png
+  tags:
+  - dotnet
+  - c#
+  - steeltoe
+  options:
+  - name: applicationName
+    label: Application Name
+    description: Application Name
+    inputType: text
+    defaultValue: Sample
+    required: true
+  - name: enableDockerfile
+    label: Dockerfile
+    description: Include a Dockerfile
+    dataType: boolean
+    inputType: toggle
+    defaultValue: false
+    required: true
+engine:
+  merge:
+  - include: [ "**" ]
+    exclude: [ "Sample.csproj", "Dockerfile" ]
+    chain:
+    - type: ReplaceText
+      substitutions:
+      - text: SampleDotNet
+        with: "#applicationName"
+  - include: [ "Sample.csproj" ]
+    chain:
+    - type: RewritePath
+      rewriteTo: "#applicationName + '.csproj'"
+  - condition: "#enableDockerfile"
+    include: [ "Dockerfile" ]
+    chain:
+    - type: ReplaceText
+      substitutions:
+      - text: Sample
+        with: "#applicationName"
