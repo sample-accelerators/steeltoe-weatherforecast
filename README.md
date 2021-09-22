@@ -28,8 +28,8 @@ $ http --verify=no https://localhost:5001/weatherforecast
 Below are a couple sample Steeltoe endpoints.  For more details, visit https://docs.steeltoe.io/.
 ```
 # health management
-$ http http://localhost:5000/actuator/health
+$ http --verify=no https://localhost:5001/actuator/health
 
 # logger management
-$ http http://localhost:5000/actuator/logger
+$ http --verify=no https://localhost:5001/actuator/logger
 ```
