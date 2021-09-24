@@ -27,7 +27,7 @@ engine:
     chain:
     - type: ReplaceText
       substitutions:
-      - text: SampleDotNet
+      - text: Sample
         with: "#applicationName"
   - include: [ "Sample.csproj" ]
     chain:
