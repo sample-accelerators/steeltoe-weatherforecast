@@ -19,17 +19,11 @@ To run the sample application:
 $ dotnet run
 ```
 
-Once running, access the Weather Forecast endpoint at https://localhost:5001/weatherforecast
+| URL | Description |
+| --- | --- |
+| https://localhost:5001/swagger | API Documentation |
+| https://localhost:5001/weatherforecast | Weather Forecast Endpoint |
+| https://localhost:5001/actuator/health | Health Status |
+| https://localhost:5001/actuator/loggers | Logger Configuration |
 
-```
-$ http --verify=no https://localhost:5001/weatherforecast
-```
-
-Below are a couple sample Steeltoe endpoints.  For more details, visit https://docs.steeltoe.io/.
-```
-# health management
-$ http --verify=no https://localhost:5001/actuator/health
-
-# logger management
-$ http --verify=no https://localhost:5001/actuator/logger
-```
+For more details on Steeltoe endpoints, visit https://docs.steeltoe.io/.
