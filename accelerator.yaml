@@ -17,7 +17,7 @@ accelerator:
     label: Dockerfile
     description: Include a Dockerfile
     dataType: boolean
-    inputType: toggle
+    inputType: checkbox
     defaultValue: false
     required: true
 engine:
