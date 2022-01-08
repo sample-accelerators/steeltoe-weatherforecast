@@ -6,6 +6,8 @@ accelerator:
   - dotnet
   - c#
   - steeltoe
+  - tanzu
+
   options:
   - name: applicationName
     label: Application Name
@@ -13,17 +15,11 @@ accelerator:
     inputType: text
     defaultValue: Sample
     required: true
-  - name: enableDockerfile
-    label: Dockerfile
-    description: Include a Dockerfile
-    dataType: boolean
-    inputType: checkbox
-    defaultValue: false
-    required: true
+
 engine:
   merge:
   - include: [ "**" ]
-    exclude: [ "Sample.csproj", "Dockerfile" ]
+    exclude: [ "README.md", "Sample.csproj", "config/**", "catalog/**" ]
     chain:
     - type: ReplaceText
       substitutions:
@@ -33,10 +29,9 @@ engine:
     chain:
     - type: RewritePath
       rewriteTo: "#applicationName + '.csproj'"
-  - condition: "#enableDockerfile"
-    include: [ "Dockerfile" ]
+  - include: [ "README.md", "config/*.yaml", "catalog/*.yaml" ]
     chain:
     - type: ReplaceText
       substitutions:
-      - text: Sample
-        with: "#applicationName"
+      - text: sample-app
+        with: "#artifactId.toLowerCase()"
