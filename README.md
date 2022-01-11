@@ -21,10 +21,10 @@ $ dotnet run
 
 | URL | Description |
 | --- | --- |
-| http://localhost:8080/swagger | API Documentation |
-| http://localhost:8080/weatherforecast | Weather Forecast Endpoint |
-| http://localhost:8080/actuator/health | Health Status |
-| http://localhost:8080/actuator/loggers | Logger Configuration |
+| http://localhost:5000/swagger | API Documentation |
+| http://localhost:5000/weatherforecast | Weather Forecast Endpoint |
+| http://localhost:5000/actuator/health | Health Status |
+| http://localhost:5000/actuator/loggers | Logger Configuration |
 
 For more details on Steeltoe endpoints, visit https://docs.steeltoe.io/.
 
