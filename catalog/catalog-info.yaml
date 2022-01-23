@@ -1,9 +1,15 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: sample-app
+  name: tanzu-csharp-web-app
+  description: Tanzu csharp Web App
+  tags:
+    - csharp
+    - web
+    - tanzu
+    - steeltoe
   annotations:
-    "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=sample-app"
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=tanzu-csharp-web-app'
 spec:
   type: service
   lifecycle: experimental
