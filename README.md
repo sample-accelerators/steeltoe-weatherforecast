@@ -59,3 +59,27 @@ tanzu apps workload get sample-app
 To access the deployed app use the URL shown under "Workload Knative Services" and append the endpoint `/weatherforecast` to that URL.
 
 This depends on the TAP installation having DNS configured for the Knative ingress.
+
+## Deploying to Cloud Foundry
+
+Publish the application locally using the .NET cli. The following command will create a publish folder automatically
+
+```
+dotnet publish -o publish Sample.csproj
+```
+
+Push the app to Cloud Foundry
+
+```
+cf push Sample -p ./publish
+```
+
+## Accessing the app deployed to your cluster
+
+Determine the URL to use for the accessing the app by running:
+
+```
+cf apps
+```
+
+To access the deployed app use the URL shown under "routes" and append the endpoint `/weatherforecast` to that URL.
