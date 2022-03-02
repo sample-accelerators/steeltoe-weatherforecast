@@ -7,6 +7,7 @@ accelerator:
   - c#
   - steeltoe
   - tanzu
+  - cloud-foundry
 
   options:
   - name: applicationName
@@ -35,3 +36,5 @@ engine:
       substitutions:
       - text: sample-app
         with: "#artifactId.toLowerCase()"
+      - text: Sample
+        with: "#applicationName"
