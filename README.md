@@ -68,7 +68,7 @@ Publish the application locally using the .NET cli. The following command will c
 dotnet publish -o publish Sample.csproj
 ```
 
-Push the app to Cloud Foundry
+Push the app to Cloud Foundry:
 
 ```
 cf push Sample -p ./publish
