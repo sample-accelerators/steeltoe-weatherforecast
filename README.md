@@ -62,7 +62,7 @@ This depends on the TAP installation having DNS configured for the Knative ingre
 
 ## Deploying to Cloud Foundry
 
-Publish the application locally using the .NET cli. The following command will create a publish folder automatically
+Publish the application locally using the .NET cli. The following command will create a publish folder automatically:
 
 ```
 dotnet publish -o publish Sample.csproj
