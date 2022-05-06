@@ -2,7 +2,7 @@
 
 A sample accelerator for Steeltoe.
 
-This sample is based on the Weather Forecast RESTful API application made available from Microsoft.  It provides a single endpoint, `/weatherforecast`, that returns a mock forecast for the upcoming several days.
+This sample is based on the Weather Forecast RESTful API application made available from Microsoft.
 
 The application also includes several Steeltoe features: management endpoints, dynamic logging, and distributed tracing.
 
@@ -18,13 +18,6 @@ To run the sample application:
 ```
 $ dotnet run
 ```
-
-| URL | Description |
-| --- | --- |
-| http://localhost:5000/swagger | API Documentation |
-| http://localhost:5000/weatherforecast | Weather Forecast Endpoint |
-| http://localhost:5000/actuator/health | Health Status |
-| http://localhost:5000/actuator/loggers | Logger Configuration |
 
 For more details on Steeltoe endpoints, visit https://docs.steeltoe.io/.
 
