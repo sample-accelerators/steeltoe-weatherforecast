@@ -28,7 +28,7 @@ k8s_custom_deploy(
   ]
 )
 
-k8s_resource(NAME, port_forwards=["8080:8080"],
+k8s_resource(NAME, port_forwards=["8083:8080"],
             extra_pod_selectors=[{'serving.knative.dev/service': 'sample-app'}])
 
 allow_k8s_contexts('<context>') # update the context
