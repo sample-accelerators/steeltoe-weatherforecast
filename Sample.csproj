@@ -21,4 +21,10 @@
     <PackageReference Include="Steeltoe.Management.TracingCore" Version="$(SteeltoeVersion)" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="StaticFiles/**/*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
