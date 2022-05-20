@@ -2,15 +2,6 @@ SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='your-registry.io/project/steel
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
 NAMESPACE = os.getenv("NAMESPACE", default='default')
 NAME = "sample-app"
-RID = "ubuntu.18.04-x64"
-CONFIGURATION = "Release"
-
-local_resource(
-  'live-update-build',
-  cmd='dotnet publish src --configuration ' + CONFIGURATION + ' --runtime ' + RID + ' --self-contained false --output ./bin',
-  deps=['.'],
-  ignore=['./bin', './obj'],
-)
 
 k8s_custom_deploy(
   NAME,
