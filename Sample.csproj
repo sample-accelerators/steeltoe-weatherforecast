@@ -23,7 +23,7 @@
 
   <ItemGroup>
     <Content Include="StaticFiles/**/*">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
