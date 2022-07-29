@@ -11,8 +11,7 @@ var url = string.Concat("http://0.0.0.0:", port);
 builder.WebHost.UseUrls(url);
 
 // Learn more about management endpoints at https://docs.steeltoe.io/api/v3/management/
-builder.Services.AddAllActuators(builder.Configuration);
-builder.Services.ActivateActuatorEndpoints();
+builder.WebHost.AddAllActuators();
 
 // Add services to the container.
 builder.Services.AddControllers();
