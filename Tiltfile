@@ -10,7 +10,7 @@ k8s_custom_deploy(
             " --local-path " + LOCAL_PATH +
             " --source-image " + SOURCE_IMAGE +
             " --namespace " + NAMESPACE +
-            " --yes" +
+            " --yes " +
             OUTPUT_TO_NULL_COMMAND +
             " && kubectl get workload " + NAME + " --namespace " + NAMESPACE + " -o yaml",
   delete_cmd="tanzu apps workload delete " + NAME + " --namespace " + NAMESPACE + " --yes",
