@@ -11,3 +11,6 @@ publish/
 
 # JetBrains Rider
 /.idea/
+
+# git info
+git.properties
