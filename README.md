@@ -1,5 +1,8 @@
 # Steeltoe Sample Accelerator
 
+> **NOTE** This repo has been archived and the sample has moved to:  
+> https://github.com/vmware-tanzu/application-accelerator-samples/tree/main/weatherforecast-steeltoe
+
 A sample accelerator for Steeltoe.
 
 This sample is based on the Weather Forecast RESTful API application made available from Microsoft.
